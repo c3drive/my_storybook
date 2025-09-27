@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"  # アプリケーションのポート
+      - "6006:6006"  # Storybookのポート
+    volumes:
+      - .:/app
+    stdin_open: true  # コンテナに標準入力を接続
+    tty: true         # 擬似端末を割り当て
