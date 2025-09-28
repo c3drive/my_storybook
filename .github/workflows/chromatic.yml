@@ -19,7 +19,7 @@ jobs:
         run: |
           cd taskbox
           yarn
-          npx chromaui/action@latest
+          npx chromaui/action@latest --prefix .
           ls -la /home/runner/work/my_storybook/my_storybook/taskbox/chromaui/action@latest/
         # Options required for Chromatic's GitHub Action
         env:
