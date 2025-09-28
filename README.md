@@ -110,4 +110,5 @@ npx msw init public/ --save
 ### Add the package as a development dependency.
 ```
 yarn add -D chromatic
+npx chromatic --project-token=chpt_d97d935304dabd3
 ```

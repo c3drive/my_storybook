@@ -2,7 +2,7 @@
 FROM node:22-alpine
 
 # Alpine Linuxにzshをインストール
-RUN apk add --no-cache zsh
+RUN apk add --no-cache zsh git
 
 # 作業ディレクトリを設定
 WORKDIR /app
