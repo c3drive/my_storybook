@@ -15,7 +15,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      # 👇 yarnを実行する前にディレクトリを移動    
       - run: cd taskbox
+      - run: ls -la
       - run: yarn
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@latest
