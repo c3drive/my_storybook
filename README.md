@@ -80,4 +80,23 @@ npm run storybook
 ```
 5. これで、ブラウザで http://localhost:6006 にアクセスすると、Storybookの画面が表示されます。
 
-この手順により、ローカル環境を汚さずに、クリーンな開発環境を簡単に構築できます。ls
+この手順により、ローカル環境を汚さずに、クリーンな開発環境を簡単に構築できます。
+
+# チュートリアルやる中で入れていったもの
+### Add the necessary dependencies to your project with:
+```
+yarn add @reduxjs/toolkit react-redux
+```
+### In your terminal, run the following command to generate a generic service worker inside your public folder:
+package.json
+```
+"scripts": {
+  "init-msw": "msw init ./public"
+}
+```
+```
+yarn add msw --dev
+yarn init-msw
+yarn add msw msw-storybook-addon -D
+npx msw init public/ --save
+```
