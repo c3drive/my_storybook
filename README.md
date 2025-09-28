@@ -60,19 +60,26 @@ docker compose up -d --build
 ```
 
 # 🛠️ 開発環境のセットアップ
-1. コンテナに接続: VS Codeでコマンドパレット（Cmd + Shift + P）を開き、「Remote-Containers: Attach to Running Container...」を選択します。プロジェクトのルートディレクトリを選ぶと、VS Codeが自動的にコンテナを起動し、接続します。
+1. コンテナ外でチュートリアルをclone
+```
+npx degit chromaui/intro-storybook-react-template taskbox
+```
 
-2. プロジェクトの作成: コンテナ内のVS Codeターミナルで、以下のコマンドを実行し、ReactとTypeScriptのプロジェクトを作成します。
+2. コンテナに接続: VS Codeでコマンドパレット（Cmd + Shift + P）を開き、「Remote-Containers: Attach to Running Container...」を選択します。プロジェクトのルートディレクトリを選ぶと、VS Codeが自動的にコンテナを起動し、接続します。
+
+3. プロジェクトの作成: コンテナ内のVS Codeターミナルで、以下のコマンドを実行。
 ```:Bash
 # コンテナ内で
-mkdir my-new-app
-cd my-new-app
-npx create-react-app . --template typescript
-```
-3. Storybookのインストール: プロジェクトの作成が完了したら、同じターミナルで以下のコマンドを実行します。
-```:Bash
-npm install
-npx storybook@latest init
+cd taskbox
+
+# Install dependencies
+yarn
+
+# Start the component explorer on port 6006:
+yarn storybook
+
+# Run the frontend app proper on port 5173:
+yarn dev
 ```
 4. Storybookの起動:
 ```:Bash
@@ -99,4 +106,8 @@ yarn add msw --dev
 yarn init-msw
 yarn add msw msw-storybook-addon -D
 npx msw init public/ --save
+```
+### Add the package as a development dependency.
+```
+yarn add -D chromatic
 ```
