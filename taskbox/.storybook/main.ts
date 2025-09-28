@@ -6,7 +6,8 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-vitest",
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
+    "@storybook/addon-a11y"
   ],
   framework: {
     name: "@storybook/react-vite",
