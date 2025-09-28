@@ -16,6 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       # 👇 yarnを実行する前にディレクトリを移動    
+      - run: pwd
       - run: cd taskbox
       - run: ls -la
       - run: yarn
