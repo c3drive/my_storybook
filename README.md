@@ -112,3 +112,8 @@ npx msw init public/ --save
 yarn add -D chromatic
 npx chromatic --project-token=chpt_d97d935304dabd3
 ```
+
+### Catch accessibility issues with Storybook
+```
+yarn exec storybook add @storybook/addon-a11y
+```
